@@ -44,6 +44,7 @@ app.post('/upload', upload.single('profileimage'), (req, res) => { // Handle the
   console.log('File uploaded:', req.file);
   console.log(req.body); // Contains other form data if any
   console.log('File uploaded successfully');
+  console.log('File path:', req.file.path); // Log the file path for debugging
   res.redirect('/'); // Redirect to the home page after successful upload
 }
 );
