@@ -22,7 +22,7 @@ app.use('/api/user', userRoutes);
 // app.use('/upload', uploadRoutes);
 
 
-const storage = multer.diskStorage({
+const storage = multer.diskStorage({ // Configure the storage settings for multer locally on the server
   destination: function (req, file, cb) {
     cb(null, 'uploads/'); // Specify the directory to save uploaded files
   },
