@@ -13,9 +13,9 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.set("view engine", "ejs");
-app.set("views",path.join(__dirname, "views"));
+app.set("views",path.join(__dirname, "views")); // Set the views directory to the correct path using path.join
 app.use(express.urlencoded({ extended: true })); // parse the form data
-app.use('/uploads', express.static('uploads')); 
+app.use('/uploads', express.static('uploads')); //  Serve static files from the 'uploads' directory to make uploaded files accessible via the '/uploads' route
 
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
